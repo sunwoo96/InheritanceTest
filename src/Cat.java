@@ -7,6 +7,7 @@ public class Cat extends Animal{
     }
 
     /* cry() 오버라이드*/
+    @Override
     public void cry(){
         System.out.println("야옹~");
     }

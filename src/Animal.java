@@ -1,4 +1,4 @@
-public  class Animal {
+public  class Animal implements Runnable {
 
     private String name;
     private double weight;
@@ -13,6 +13,7 @@ public  class Animal {
     // default 생성자
     public Animal(){}
 
+    @Override
     public void cry(){
         System.out.println("animal cry");
     };
