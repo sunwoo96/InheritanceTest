@@ -1,4 +1,4 @@
 @FunctionalInterface
-public interface Runnable {
+public interface RunnableCry {
     public void cry();
 }

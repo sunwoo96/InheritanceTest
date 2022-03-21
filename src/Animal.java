@@ -1,11 +1,13 @@
-public  class Animal implements Runnable {
+public  class Animal implements RunnableCry {
 
     private String name;
+    private int age;
     private double weight;
     private int leg;
 
-    public Animal(String name, double weight, int leg) {
+    public Animal(String name, int age, double weight, int leg) {
         this.name = name;
+        this.age = age;
         this.weight = weight;
         this.leg = leg;
     }
@@ -29,6 +31,14 @@ public  class Animal implements Runnable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public double getWeight() {
