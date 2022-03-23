@@ -1,16 +1,15 @@
 import java.time.LocalDate;
-import java.time.Period;
 
-public class Human extends Animal implements RunnableAgePrint {
+public class Person extends Animal implements RunnableAgePrint {
 
     private LocalDate birthDate;
     private LocalDate nowDate;
     private long period;
 
-    public Human() {
+    public Person() {
     }
 
-    public Human(String name, int age, double weight, int leg) {
+    public Person(String name, int age, double weight, int leg) {
         super(name, age, weight, leg);
     }
 
@@ -37,6 +36,8 @@ public class Human extends Animal implements RunnableAgePrint {
     public long getPeriod() {
         return period;
     }
+
+
 
     @Override
     public String printAge() {

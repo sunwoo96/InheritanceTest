@@ -2,15 +2,13 @@
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
-import java.time.Period;
-import java.time.chrono.ChronoPeriod;
 import java.time.temporal.ChronoUnit;
 
 class DateTest {
     @Test
     public void 나이출력() throws Exception {
         //given
-        Human wilson = new Human();
+        Person wilson = new Person();
         wilson.setBirthDate(LocalDate.of(1996,3,20));
         wilson.setNowDate(LocalDate.now());
         //when

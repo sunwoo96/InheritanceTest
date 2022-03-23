@@ -57,5 +57,13 @@ public  class Animal implements RunnableCry {
         this.leg = leg;
     }
 
-
+    @Override
+    public String toString() {
+        return "{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", weight=" + weight +
+                ", leg=" + leg +
+                '}';
+    }
 }
