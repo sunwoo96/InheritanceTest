@@ -53,7 +53,7 @@ public class PersonArrayListTest {
         /*"a" 포함하는 문자열*/
         Stream<String> stream = list.stream().filter(name -> name.contains("a"));
         //then
-        stream.forEach(ps -> System.out.println(ps+" "));
+        stream.forEach(job -> System.out.println(job+" "));
 
     }
 
