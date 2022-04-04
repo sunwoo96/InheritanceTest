@@ -9,7 +9,7 @@ class DateTest {
     public void 나이출력() throws Exception {
         //given
         Person wilson = new Person();
-        wilson.setBirthDate(LocalDate.of(1996,3,20));
+        wilson.setBirthDate(LocalDate.of(1990,5,20));
         wilson.setNowDate(LocalDate.now());
         //when
         wilson.setPeriod(ChronoUnit.YEARS.between(wilson.getBirthDate(),wilson.getNowDate()));

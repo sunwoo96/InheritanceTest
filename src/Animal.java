@@ -21,7 +21,8 @@ public  class Animal implements RunnableCry {
     };
 
     public void infoPrint(Animal ani){
-        System.out.println("이름 : "+ani.getName()+" 체중 : "+ani.getWeight() +" kg 다리 : "+ani.getLeg()+"개");
+        System.out.println("이름 : "+ani.getName()+" 나이: "+ ani.getAge()+
+                " 체중 : "+ani.getWeight() +" kg 다리 : "+ani.getLeg()+"개");
     }
 
     /* getter, setter */
