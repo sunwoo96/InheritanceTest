@@ -3,6 +3,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 import java.util.stream.Stream;
 
 import static org.junit.Assert.assertEquals;
@@ -48,13 +49,26 @@ public class PersonArrayListTest {
     @Test
     public void 스트림테스트() throws Exception {
         //given
-        List<String> list = Arrays.asList("student", "teacher", "police", "fireman" );
+        List<String> list = Arrays.asList("student", "teacher", "police", "fireman", "teacher");
         //when
-        /*"a" 포함하는 문자열*/
-        Stream<String> stream = list.stream().filter(name -> name.contains("a"));
-        //then
-        stream.forEach(job -> System.out.println(job+" "));
+        /* Filter "a" 포함하는 문자열*/
+        Stream<String> stream1 = list.stream().filter(name -> name.contains("a"));
+        /*Map 대문자로 데이터 변환*/
+        Stream<String> stream2 = list.stream().map(s -> s.toUpperCase(Locale.ROOT));
+        /*sorted 정렬 */
+        Stream<String> stream3 = list.stream().sorted();
+        /*distinct 중복 제거*/
+        Stream<String> stream4 = list.stream().distinct();
 
+        //then
+        System.out.println("** 문자 포함");
+        stream1.forEach(job -> System.out.println(job+" "));
+        System.out.println("**대문자 변환");
+        stream2.forEach(s -> System.out.println(s+" "));
+        System.out.println("**정렬");
+        stream3.forEach(s -> System.out.println(s+" "));
+        System.out.println("**중복 제거");
+        stream4.forEach(s -> System.out.println(s+" "));
     }
 
 } // PersonArrayListTest
